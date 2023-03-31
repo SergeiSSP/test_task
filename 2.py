@@ -30,7 +30,7 @@ def upload_file():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             end = datetime.now()
             delta = end - start
-            return f'File {filename} is uploaded in {delta} and link is <a href="/uploads/{filename}">Download {filename}</a>'
+            return f'{start.strftime("%m/%d/%Y, %H:%M:%S")}: File {filename} is uploaded in {delta} and link is <a href="/uploads/{filename}">Download {filename}</a>'
     return '''
     <!doctype html>
     <title>Load new file</title>
