@@ -49,4 +49,8 @@ def download_file(name):
 
 
 if __name__ == "__main__":
+    if not os.path.exists('downloads'):
+        os.mkdir('downloads')
+    else:
+        print('Directory already exists')
     app.run()
